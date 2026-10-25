@@ -1,0 +1,11 @@
+{
+  "name": "wco-weather",
+  "version": "1.0.0",
+  "private": true,
+  "description": "West Central Ohio Weather Center - static site",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "dev": "node scripts/dev.js"
+  },
+  "engines": { "node": ">=18" }
+}

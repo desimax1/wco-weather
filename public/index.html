@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>West Central Ohio Weather Center | Bellefontaine and Logan County Weather</title>
+<meta name="description" content="Current conditions, National Weather Service alerts, forecasts, live radar and forecast discussions for Bellefontaine, Logan County and West Central Ohio.">
+<link rel="canonical" href="{{siteUrl}}{{path}}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="West Central Ohio Weather Center">
+<meta property="og:title" content="West Central Ohio Weather Center | Bellefontaine and Logan County Weather">
+<meta property="og:description" content="Current conditions, National Weather Service alerts, forecasts, live radar and forecast discussions for Bellefontaine, Logan County and West Central Ohio.">
+<link rel="icon" href="{{base}}/favicon.png" type="image/png">
+<link rel="stylesheet" href="{{base}}/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+</head>
+<body data-page="home">
+<!--HEADER-->
+<section class="hero">
+  <div class="wrap">
+    <h1>West Central Ohio weather</h1>
+    <p class="sub">Bellefontaine, Logan County and surrounding communities</p>
+    <div id="alert-strip" class="alert-strip err" role="status" aria-live="polite"><span class="loading">Checking National Weather Service alerts…</span></div>
+    <div id="safety-dyn" hidden></div>
+    <div class="hero-grid">
+      <section class="glass" aria-labelledby="h-cond">
+        <h2 id="h-cond">Current conditions</h2>
+        <div id="conditions"><p class="loading">Loading observations…</p></div>
+      </section>
+      <section class="card" aria-labelledby="h-fc">
+        <h2 id="h-fc">5-day forecast</h2>
+        <div id="home-forecast"><p class="loading">Loading forecast…</p></div>
+        <p class="src"><a href="{{base}}/forecast.html">Full forecast, hourly and outlooks</a></p>
+      </section>
+    </div>
+  </div>
+</section>
+<main id="main" class="wrap">
+  <div class="grid g2">
+    <section class="card" aria-labelledby="h-rad">
+      <h2 id="h-rad">Live radar</h2>
+      <div id="radar-map" class="radar compact" role="region" aria-label="Live radar map of West Central Ohio"></div>
+      <p class="src">Latest NEXRAD radar mosaic. <a href="{{base}}/radar.html">Open the full radar with animation</a></p>
+    </section>
+    <section class="card" aria-labelledby="h-disc">
+      <h2 id="h-disc">Forecast discussion</h2>
+      <div id="home-discussion"><p class="loading">Loading…</p></div>
+    </section>
+  </div>
+  <section style="margin-top:1.5rem" aria-labelledby="h-posts">
+    <h2 id="h-posts">Latest from the blog</h2>
+    <div id="home-posts" class="posts"><p class="loading">Loading posts…</p></div>
+    <p><a class="btn alt" href="{{base}}/blog.html">All posts</a></p>
+  </section>
+  <section style="margin-top:1.5rem" aria-labelledby="h-safe">
+    <h2 id="h-safe">Know the difference</h2>
+    <div class="safety">
+      <div class="card"><h3>Watch</h3><p>Conditions are favorable for dangerous weather. Stay alert, have a plan, and keep a way to receive warnings.</p></div>
+      <div class="card"><h3>Warning</h3><p>Dangerous weather is happening or about to happen. Take action now. For a tornado warning, move to the lowest interior room away from windows.</p></div>
+      <div class="card"><h3>Get warnings overnight</h3><p>Use a NOAA Weather Radio and enable Wireless Emergency Alerts on your phone. Do not rely on a website alone. <a href="{{base}}/about.html">More safety information</a></p></div>
+    </div>
+  </section>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" defer></script>
+
+<!--FOOTER-->
+</body>
+</html>

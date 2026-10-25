@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Forecast | West Central Ohio Weather Center</title>
+<meta name="description" content="National Weather Service forecast for Bellefontaine and Logan County, Ohio, with hourly details, severe weather outlooks and a local forecast discussion.">
+<link rel="canonical" href="{{siteUrl}}{{path}}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="West Central Ohio Weather Center">
+<meta property="og:title" content="Forecast | West Central Ohio Weather Center">
+<meta property="og:description" content="National Weather Service forecast for Bellefontaine and Logan County, Ohio, with hourly details, severe weather outlooks and a local forecast discussion.">
+<link rel="icon" href="{{base}}/favicon.png" type="image/png">
+<link rel="stylesheet" href="{{base}}/css/style.css">
+</head>
+<body data-page="forecast">
+<!--HEADER-->
+<div class="pagehead"><div class="wrap"><h1>Forecast</h1><p>Bellefontaine and Logan County, Ohio. Forecast data comes from the National Weather Service.</p></div></div>
+<main id="main" class="wrap stack">
+  <section class="card" aria-labelledby="h-cond"><h2 id="h-cond">Current conditions</h2><div id="conditions"><p class="loading">Loading observations…</p></div></section>
+  <section class="card" aria-labelledby="h-today"><h2 id="h-today">Today and tonight</h2><div id="fc-today"><p class="loading">Loading forecast…</p></div></section>
+  <section class="card" aria-labelledby="h-disc"><h2 id="h-disc">Local forecast discussion</h2><div id="discussion"><p class="loading">Loading…</p></div></section>
+  <section class="card" aria-labelledby="h-ext"><h2 id="h-ext">Extended forecast</h2><div id="fc-ext"></div><p class="src" id="fc-src"></p></section>
+  <section class="card" aria-labelledby="h-hr"><h2 id="h-hr">Next 12 hours</h2><div id="fc-hourly" class="scroll"></div></section>
+  <section class="card" aria-labelledby="h-spc"><h2 id="h-spc">Severe weather outlooks</h2>
+    <p>Images below are loaded directly from the NOAA Storm Prediction Center and update when SPC issues a new outlook. Check the SPC page for issue times.</p>
+    <div class="outlooks">
+      <figure><a href="https://www.spc.noaa.gov/products/outlook/day1otlk.html" rel="noopener"><img src="https://www.spc.noaa.gov/products/outlook/day1otlk.gif" alt="SPC Day 1 convective outlook map of the United States" loading="lazy"></a><figcaption>SPC Day 1 convective outlook</figcaption></figure>
+      <figure><a href="https://www.spc.noaa.gov/products/outlook/day2otlk.html" rel="noopener"><img src="https://www.spc.noaa.gov/products/outlook/day2otlk.gif" alt="SPC Day 2 convective outlook map of the United States" loading="lazy"></a><figcaption>SPC Day 2 convective outlook</figcaption></figure>
+      <figure><a href="https://www.spc.noaa.gov/products/outlook/day3otlk.html" rel="noopener"><img src="https://www.spc.noaa.gov/products/outlook/day3otlk.gif" alt="SPC Day 3 convective outlook map of the United States" loading="lazy"></a><figcaption>SPC Day 3 convective outlook</figcaption></figure>
+    </div>
+    <p class="src">Source: <a href="https://www.spc.noaa.gov/" rel="noopener">Storm Prediction Center</a>. If an image does not load, use the links.</p>
+  </section>
+  <section class="card afd" aria-labelledby="h-afd"><h2 id="h-afd">Official NWS forecast discussion</h2><div id="afd"><p class="loading">Loading…</p></div></section>
+</main>
+<!--FOOTER-->
+</body>
+</html>

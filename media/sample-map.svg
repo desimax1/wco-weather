@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Sample placeholder graphic">
+<rect width="800" height="600" fill="#0b2447"/>
+<g fill="none" stroke="#2c6cb5" stroke-width="2"><circle cx="400" cy="300" r="90"/><circle cx="400" cy="300" r="180"/><circle cx="400" cy="300" r="270"/></g>
+<path d="M400 300 L400 30 A270 270 0 0 1 640 160 Z" fill="#6cb8ff" opacity=".25"/>
+<rect x="150" y="250" width="500" height="100" rx="10" fill="#f2b705"/>
+<text x="400" y="298" text-anchor="middle" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#0b2447">SAMPLE GRAPHIC</text>
+<text x="400" y="332" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#0b2447">Not a real map or forecast</text>
+</svg>

@@ -1,0 +1,141 @@
+# Pages CMS configuration  -  https://pagescms.org/docs/configuration/
+# Sign in at https://app.pagescms.org with the GitHub account that owns this repository.
+
+media:
+  input: media
+  output: /media
+  rename: safe
+  categories: [image]
+
+content:
+  - name: discussion
+    label: Forecast Discussion (Forecast page)
+    type: file
+    path: content/discussion.md
+    format: yaml-frontmatter
+    operations:
+      delete: false
+    fields:
+      - name: title
+        label: Headline
+        type: string
+        required: true
+      - name: updated
+        label: Date and time written
+        type: date
+        options:
+          time: true
+          format: "yyyy-MM-dd'T'HH:mm"
+      - name: author
+        label: Author
+        type: string
+      - name: body
+        label: Discussion
+        type: rich-text
+        options:
+          media: false
+
+  - name: posts
+    label: Blog Posts
+    type: collection
+    path: content/posts
+    filename: "{primary}.md"
+    format: yaml-frontmatter
+    view:
+      fields: [title, date, category, draft]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Publish date and time
+        type: date
+        options:
+          time: true
+          format: "yyyy-MM-dd'T'HH:mm"
+      - name: category
+        label: Category
+        type: select
+        required: true
+        options:
+          values:
+            - Forecast Discussion
+            - Severe Weather Outlook
+            - Storm Summary
+            - Weather Education
+            - Local Update
+            - Seasonal Outlook
+            - Other
+      - name: draft
+        label: Draft (turn ON to keep this hidden from the website)
+        type: boolean
+        default: false
+      - name: summary
+        label: Short summary (shown on the homepage)
+        type: text
+        options:
+          maxlength: 280
+      - name: image
+        label: Featured image (optional)
+        type: image
+      - name: image_alt
+        label: Describe the image (for screen readers)
+        type: string
+      - name: body
+        label: Article
+        type: rich-text
+        options:
+          path: media
+
+  - name: maps
+    label: Maps and Graphics
+    type: collection
+    path: content/maps
+    filename: "{primary}.md"
+    format: yaml-frontmatter
+    view:
+      fields: [title, date, category]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Date and time
+        type: date
+        options:
+          time: true
+          format: "yyyy-MM-dd'T'HH:mm"
+      - name: category
+        label: Type
+        type: select
+        required: true
+        options:
+          values:
+            - Forecast Map
+            - Outlook Graphic
+            - Storm Report
+            - Radar Capture
+            - Data and Climate
+            - Other
+      - name: image
+        label: Image
+        type: image
+        required: true
+      - name: image_alt
+        label: Describe the image (for screen readers)
+        type: string
+      - name: caption
+        label: Caption
+        type: text

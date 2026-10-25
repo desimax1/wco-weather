@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Radar | West Central Ohio Weather Center</title>
+<meta name="description" content="Live NEXRAD weather radar for West Central Ohio with a 50 minute loop, plus links to official National Weather Service radar.">
+<link rel="canonical" href="{{siteUrl}}{{path}}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="West Central Ohio Weather Center">
+<meta property="og:title" content="Radar | West Central Ohio Weather Center">
+<meta property="og:description" content="Live NEXRAD weather radar for West Central Ohio with a 50 minute loop, plus links to official National Weather Service radar.">
+<link rel="icon" href="{{base}}/favicon.png" type="image/png">
+<link rel="stylesheet" href="{{base}}/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+</head>
+<body data-page="radar">
+<!--HEADER-->
+<div class="pagehead"><div class="wrap"><h1>Radar</h1><p>Live national radar mosaic, centered on Bellefontaine. Zoom and drag to explore.</p></div></div>
+<main id="main" class="wrap stack">
+  <section class="card">
+    <div id="radar-map" class="radar" role="region" aria-label="Live weather radar map"></div>
+    <div class="radar-ctl">
+      <button id="radar-play" class="btn" type="button">Play loop</button>
+      <label for="radar-slider" class="muted">Time</label>
+      <input id="radar-slider" type="range" min="0" max="10" value="10" step="1">
+      <strong id="radar-label" aria-live="polite">Latest scan</strong>
+    </div>
+    <div id="radar-status" class="notice" hidden></div>
+    <p class="src">Radar tiles: NEXRAD base reflectivity mosaic from the <a href="https://mesonet.agron.iastate.edu/" rel="noopener">Iowa Environmental Mesonet</a>, free to use. Frames are about 5 minutes apart. The loop shows roughly the last 50 minutes. Basemap: OpenStreetMap contributors.</p>
+  </section>
+  <section class="card"><h2>Official radar</h2>
+    <p>For the full set of NWS radar products (velocity, storm tracks, long loops), use these official sources:</p>
+    <p><a class="btn" href="https://radar.weather.gov/" rel="noopener">NWS Radar</a> <a class="btn alt" href="https://www.weather.gov/iln/" rel="noopener">NWS Wilmington (ILN)</a></p>
+    <p class="src">Limits of this page: reflectivity only, no storm-relative velocity. Radar shows precipitation, not tornadoes. A radar image can be delayed or unavailable. Always follow official warnings.</p>
+  </section>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" defer></script>
+
+<!--FOOTER-->
+</body>
+</html>

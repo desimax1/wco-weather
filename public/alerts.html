@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Alerts and Warnings | West Central Ohio Weather Center</title>
+<meta name="description" content="Active National Weather Service watches, warnings and advisories for Logan County and the surrounding coverage counties in West Central Ohio.">
+<link rel="canonical" href="{{siteUrl}}{{path}}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="West Central Ohio Weather Center">
+<meta property="og:title" content="Alerts and Warnings | West Central Ohio Weather Center">
+<meta property="og:description" content="Active National Weather Service watches, warnings and advisories for Logan County and the surrounding coverage counties in West Central Ohio.">
+<link rel="icon" href="{{base}}/favicon.png" type="image/png">
+<link rel="stylesheet" href="{{base}}/css/style.css">
+</head>
+<body data-page="alerts">
+<!--HEADER-->
+<div class="pagehead"><div class="wrap"><h1>Alerts and warnings</h1><p>Official National Weather Service alerts for Logan County and the surrounding coverage counties. This page never shows commentary as an alert.</p></div></div>
+<main id="main" class="wrap">
+  <div id="alerts-meta" class="alert-strip err" role="status" aria-live="polite"><span class="loading">Checking National Weather Service alerts…</span></div>
+  <div class="filters" role="group" aria-label="Filter alerts">
+    <button class="chip" type="button" data-f="home" aria-pressed="true">Logan County</button>
+    <button class="chip" type="button" data-f="all" aria-pressed="false">All nearby counties</button>
+  </div>
+  <div id="alerts-list"></div>
+  <section class="card" style="margin-top:1rem"><h2>Area covered</h2>
+    <p id="counties">Logan, Champaign, Union, Hardin, Shelby, Auglaize, Mercer, Darke, Miami and Clark counties.</p>
+    <p class="src">Source: <a href="https://www.weather.gov/documentation/services-web-api" rel="noopener">National Weather Service API</a>. Each alert links to its original record. Alerts refresh automatically every 2 minutes while this page is open. For the authoritative list, visit <a href="https://www.weather.gov/iln/" rel="noopener">weather.gov/iln</a>.</p>
+  </section>
+</main>
+<!--FOOTER-->
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{title}} | West Central Ohio Weather Center</title>
+<meta name="description" content="{{desc}}">
+<link rel="canonical" href="{{siteUrl}}{{path}}">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="West Central Ohio Weather Center">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{desc}}">
+<meta property="og:image" content="{{ogImage}}">
+<link rel="icon" href="{{base}}/favicon.png" type="image/png">
+<link rel="stylesheet" href="{{base}}/css/style.css">
+</head>
+<body data-page="blog">
+<!--HEADER-->
+<main id="main" class="wrap narrow">
+  <article class="article">
+    <p class="crumbs"><a href="{{base}}/blog.html">Blog</a></p>
+    <p class="meta"><span class="tag">{{category}}</span> <time datetime="{{date}}">{{dateText}}</time></p>
+    <h1>{{title}}</h1>
+    {{sampleHtml}}
+    {{imageHtml}}
+    <div class="prose">
+{{content}}
+    </div>
+    <p class="disclaimer">Opinions and commentary on this page are from West Central Ohio Weather Center, not the National Weather Service. For official forecasts and warnings, see <a href="https://www.weather.gov/iln/" rel="noopener">weather.gov/iln</a>.</p>
+  </article>
+</main>
+<!--FOOTER-->
+</body>
+</html>
